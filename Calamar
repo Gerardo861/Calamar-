@@ -1,0 +1,85 @@
+int pixel = 10;
+int calamarX = 100;
+int calamarY = 100;
+int pose = 0;
+
+void setup(){
+  size(500, 500);
+  background(0);
+  fill(255);
+  noStroke();
+  frameRate(4);
+}
+
+void draw(){
+    background(0);
+    if(pose == 0)
+  {
+      //Calamar pose 1
+    //linea 1
+    rect(calamarX, calamarY, pixel*2, pixel);
+    
+    //linea 2
+    rect(calamarX - pixel, calamarY + pixel, pixel*4, pixel);
+    
+    //linea3
+    rect(calamarX - pixel*2, calamarY + pixel*2, pixel*6, pixel);
+    
+    //linea 4
+    rect(calamarX - pixel*3, calamarY + pixel*3, pixel*2, pixel);
+    rect(calamarX, calamarY + pixel*3, pixel*2, pixel);
+    rect(calamarX + pixel*3, calamarY + pixel*3, pixel*2, pixel);
+    
+    //linea 5
+    rect(calamarX - pixel*3, calamarY + pixel*4, pixel*8, pixel);
+    
+    //linea 6
+    rect(calamarX - pixel, calamarY + pixel*5, pixel, pixel);
+    rect(calamarX + pixel*2, calamarY + pixel*5, pixel, pixel);
+    
+    //linea 7
+    rect(calamarX - pixel*2, calamarY +pixel*6, pixel, pixel);
+    rect(calamarX, calamarY + pixel*6, pixel*2, pixel);
+    rect(calamarX + pixel*3, calamarY + pixel*6, pixel, pixel);
+    
+    //linea8
+    rect(calamarX - pixel*3, calamarY + pixel*7, pixel, pixel);
+    rect(calamarX - pixel, calamarY + pixel*7, pixel, pixel);
+    rect(calamarX + pixel*2, calamarY + pixel*7, pixel, pixel);
+    rect(calamarX + pixel*4, calamarY + pixel*7, pixel, pixel);
+    pose = 1;
+  }
+  else{
+        //Calamar pose 2
+    //linea 1
+    rect(calamarX, calamarY + pixel*10, pixel*2, pixel);
+    
+    //linea 2
+    rect(calamarX - pixel, calamarY + pixel*10 + pixel, pixel*4, pixel);
+    
+    //linea3
+    rect(calamarX - pixel*2, calamarY + pixel*12, pixel*6, pixel);
+    
+    //linea 4
+    rect(calamarX - pixel*3, calamarY + pixel*13, pixel*2, pixel);
+    rect(calamarX, calamarY + pixel*13, pixel*2, pixel);
+    rect(calamarX + pixel*3, calamarY + pixel*13, pixel*2, pixel);
+    
+    //linea 5
+    rect(calamarX - pixel*3, calamarY + pixel*14, pixel*8, pixel);
+    
+    //linea 6
+    rect(calamarX, calamarY + pixel*15, pixel*2, pixel);
+    rect(calamarX + pixel*3, calamarY + pixel*15, pixel, pixel);
+    rect(calamarX - pixel*2, calamarY + pixel*15, pixel, pixel);
+    
+    //linea 7
+    rect(calamarX + pixel*4, calamarY + pixel*16, pixel, pixel);
+    rect(calamarX - pixel*3, calamarY + pixel*16, pixel, pixel);
+    
+    //linea8
+    rect(calamarX + pixel*3, calamarY + pixel*17, pixel, pixel);
+    rect(calamarX - pixel*2, calamarY + pixel*17, pixel, pixel);
+    pose= 0;
+  }
+}
